@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1035522544277",
+    "project_id": "medicaltayari-c7560",
+    "storage_bucket": "medicaltayari-c7560.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035522544277:android:2a78aab1579348248c819c",
+        "android_client_info": {
+          "package_name": "com.suasnomy.medical_tayari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035522544277-gn4v5dhnog9e7db4tojav31d7mtafr99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe-VM7A6skWzOtM9hYiiTElpAY1aFp66w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035522544277-gn4v5dhnog9e7db4tojav31d7mtafr99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
