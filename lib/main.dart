@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medical_tayari/Biology/Botany/botany_units.dart';
 import 'package:medical_tayari/Biology/Zoology/zoology_units.dart';
+import 'package:medical_tayari/logIn/LogInPage.dart';
 import 'package:medical_tayari/paper_collection/Collections.dart';
 import 'package:medical_tayari/physics/Electricity_Magnetism/electromagnetism_chapters.dart';
 import 'package:medical_tayari/physics/Electrostatics/electrostatics_chapters.dart';
@@ -10,9 +11,10 @@ import 'package:medical_tayari/physics/Modern_Physics/modern_physics_chapters.da
 import 'package:medical_tayari/physics/Optics/optics_chapters.dart';
 import 'package:medical_tayari/physics/Wave_Theory_Sound/wave_sound_chapters.dart';
 import 'package:medical_tayari/physics/physics_units.dart';
-
-void main() {
-  
+import 'package:firebase_core/firebase_core.dart';
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -21,8 +23,11 @@ void main() {
           primaryColor: Color(0xFF0A0E21),
           backgroundColor: Color(0xFFF252B50),
           scaffoldBackgroundColor: Color(0xFF0A0E21),
+
+          brightness: Brightness.dark,
         ),
         routes: {
+          LogInPage.logIn: (context) => LogInPage(),
           Collections.collection: (context) => Collections(),
           PhysicsUnits.physics: (context) => PhysicsUnits(),
           ZoologyUnits.zoologyUnits: (context) => ZoologyUnits(),
@@ -41,7 +46,7 @@ void main() {
           ModernPhysicsChaptersList.modernPhysicsChapters: (context) =>
               ModernPhysicsChaptersList(),
         },
-        initialRoute: Collections.collection,
+        initialRoute: LogInPage.logIn,
       )
   );
 }
